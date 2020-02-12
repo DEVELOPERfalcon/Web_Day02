@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>04Ex</title>
+    </head>
+    <body>
+        <audio src="./old_pop.mp3" autoplay="autoplay" controls="controls">
+            브라우저에서 audio 요소를 지원하지 않으면 보이는 글씨!!
+        </audio>
+        <!-- 크롬브라우저는 2018sus 04월부터 autoplay를 지원하지 않음 -->
+        <!-- 브라우저에 따른 음원의 유형에 대응하기 위해 <source>요소 사용 -->
+        <audio controls autoplay>
+            <source src="./old_pop.mp3" type="audio/mp3">
+            <source src="./old_pop.ogg" type="audio/ogg">
+        </audio>
+
+        <video controls>
+            <source src="./movie.ogv" type="video/ogg"> <!-- ogv파일의 MIME타입은 ogg임 -->
+        </video>
+
+        <!-- poster, width, height 속성 적용 -->
+        <video controls poster="./americano.jpg" width="640" height="480">
+            <source src="./trailer.mp4" type="video/mp4">
+            <source src="./trailer.webm" type="video/webm">
+            <source src="./trailer.ogv" type="video/ogg">
+        </video>
+
+        <hr>
+        <hr>
+
+        <!-- iframe: inline frame - 다른 문서 가져와 보여주기 -->
+        <iframe src="../Day01/02_text.html" frameborder="0" width="300" height="150"></iframe>
+
+        <!-- 다른 웹서버의 사이트 문서도 표시 가능 -->
+        <iframe src="http://developer3.dothome.co.kr/index.html" width="300" height="150"></iframe>
+        
+        <!-- 링크<a>요소에 의해 열리는 target으로 iframe 지정이 가능함 -->
+        <hr>
+        <iframe src="" name="aaa"></iframe>
+        <a href="../Day01/02_text.html" target="aaa">02_text.html문서 열기</a>
+
+        <hr>
+        <hr>
+
+        <!-- div 요소: divide 논리적 영역 구분 (block요소) -->
+        <div style="background-color: yellow; border: 2px solid red; padding-left: 10px;">
+            <h2>Title</h2>
+            <p>This is message.</p>
+        </div>
+
+        <!-- div요소의 [block요소] 특징 알아보기 -->
+        <p>
+            안녕하세요. 나는 <div style="color: blue;">홍길동</div> 입니다.
+        </p>
+
+        <!-- <span>요소: div요소와 같은 역할이지만 [inline요소] 특성을 가짐 -->
+        <p>
+            안녕하세요. 나는 <span style="color: blue;">홍길동</span> 입니다.
+        </p>
+
+        <!-- div의 영역 레이아웃 구조 연습 -->
+        <!-- <div>의 영역 구분은 나중에 웹페이지의 헤더영역, 본문영역, 푸터영역을 구분하는데 주요한 역할을 함. -->
+        <div id="header" style="background-color: yellow; height: 20px;"></div>
+        <div id="content" style="background-color: green; height: 100px;"></div>
+        <div id="footer" style="background-color: blue; height: 20px;"></div>
+
+    </body>
+</html>

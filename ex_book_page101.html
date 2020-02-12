@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EXERCISE WEBPROGRAMMING</title>
+    </head>
+    <body>
+        <!-- 1. 2번 -->
+        <!-- 2. 3번 -->
+        <!-- 3. <source>요소 사용 -->
+        <video src="dog.mp4" width="300" height="200" controls></video> <br>
+        <!-- 4 -->
+        <video width="300" height="200" controls>
+            <source src="dog.mp4" type="video/mp4">
+            <source src="dog.ogv" type="video/ogg">
+        </video><br>
+        <!-- 5 -->
+        <video src="http://media.w3.org/2010/05/bunny/movie.ogv" width="300" height="200" controls></video><br>
+        <!-- 6 -->
+        <div>
+            <iframe src="https://www.naver.com/" name="iframe"></iframe> <br>
+            <ul>
+                <li><a href="https://www.naver.com/" target="iframe">네이버</a></li>
+                <li><a href="https://www.daum.net/" target="iframe">다음</a></li>
+                <li><a href="https://www.nate.com/" target="iframe">네이트</a></li>
+            </ul>
+        </div>
+        <!-- 7 -->
+        <form>
+            <div>
+                <h3>HTML5 요소 데모 화면</h3>
+                이름: <input type="text" name="name"> <br>
+                이메일: <input type="email" name="email"> <br>
+                웹사이트: <input type="url" name="website"> <br>
+                정수 <input type="number"> <br>
+                범위 <input type="range"> <br>
+                메세지: <textarea cols="30" rows="2"></textarea> <br>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <!-- 8 -->
+        <fieldset>
+            <legend>신상정보</legend>
+            <ol>
+                <li>이름: <input type="text" name="name" placeholder="이름"></li>
+                <li>이메일: <input type="email" name="email" placeholder="example@domain.com"></li>
+                <li>휴대폰 번호: <input type="text" name="tel" placeholder="01012345678"></li>
+            </ol>
+        </fieldset>
+        <!-- 9 -->
+        <fieldset>
+            <legend>배송지 주소</legend>
+            <ol>
+                <li>주소: <textarea name="address" cols="40" rows="4"></textarea></li>
+                <li>우편번호: <input type="text"></li>
+                <li>국가: <input type="text"></li>
+            </ol>
+        </fieldset>
+        <!-- 10 -->
+        <form>
+            <fieldset>
+                <legend>카드 정보 입력</legend>
+                <ol>
+                    <li>
+                        <fieldset>
+                            <legend>카드 타입</legend>
+                            <ol aria-required="true">
+                                <li><input type="radio" name="card" value="VISA"> VISA</li>
+                                <li><input type="radio" name="card" value="AmEx"> AmEx</li>
+                                <li><input type="radio" name="card" value="Mastercard"> Mastercard</li>
+                            </ol>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <label for="cardnum">카드 번호</label>
+                        <input type="number" id="cardnum" name="cardnum" required>
+                    </li>
+                    <li>
+                        <label for="crcnum">CRC 번호</label>
+                        <input type="number" id="crcnum" name="crcnum" required>
+                    </li>
+                    <li>
+                        <label for="name">카드 소우자 이름</label>
+                        <input type="text" id="name" name="name" placeholder="카드 상의 이름" required>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="구매">
+            </fieldset>
+        </form>
+    </body>
+</html>
